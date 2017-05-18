@@ -19,7 +19,6 @@ h1{
     margin: auto;
     padding:8%;
     max-width:100%;
-    border-radius:10px;
     text-align:center;
     font-size: 40;
     font-style: bold;
@@ -59,7 +58,6 @@ h3{
     padding:10px;
     max-width:100%;
     margin:auto;
-    border-radius:10px;
     text-align:center;
 }
 .projects{
@@ -103,12 +101,11 @@ li a:hover {
     list-style-type: none;
     margin:0;
     padding:0;
-    overflow: hidden;
     text-align: left;
-    font-size: 22;
+    font-size: 18;
     font-family:sans-serif;
     font-style: normal;
     text-decoration: none;
-
-    color:#9B90A0
+    color:#9B90A0;
+    background-color: #B3C3E4;
 }
