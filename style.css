@@ -1,0 +1,114 @@
+
+body{
+    background-color:#9B90A0;
+    font-family:"Veranda", sans-serif;
+
+}
+ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    background-color:#DEBEC2;
+
+}
+h1{
+    background-image: url("IMG_7088.jpg");
+    background-repeat: no-repeat;
+    color:#ffffff;
+    margin: auto;
+    padding:8%;
+    max-width:100%;
+    border-radius:10px;
+    text-align:center;
+    font-size: 40;
+    font-style: bold;
+    font-family: monospace;
+}
+h2{
+    color:#9B90A0;
+    text-align: center;
+    font-size: 35;
+    font-family:monospace;
+    font-style: normal;
+}
+.aboutMe{
+    color:#9B90A0;
+    text-align: center;
+    font-size: 22;
+    font-family:monospace;
+
+}
+img{
+    display: block;
+    margin: auto;
+    width: 20%;
+
+}
+.contact{
+    color:#9B90A0;
+    text-align: center;
+    font-size: 18;
+    font-family:monospace;
+    font-style: normal;
+    text-decoration: underline;
+}
+h3{
+    background-color:#DEBEC2;
+    color:#ffffff;
+    padding:10px;
+    max-width:100%;
+    margin:auto;
+    border-radius:10px;
+    text-align:center;
+}
+.projects{
+    color:#9B90A0;
+    text-align: left;
+    font-size: 22;
+    font-family:monospace;
+    font-style: normal;
+    text-decoration: underline;
+}
+li{
+    float:left;
+
+}
+.active{
+    background-color:#DEBEC2;
+
+
+}
+li a{
+    display: block;
+    color:#ffffff;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+
+}
+li a:hover {
+    background-color: #8199C3;
+    color: #000;
+}
+.description {
+    color:#9B90A0;
+    text-align: left;
+    font-size: 16;
+    font-family:sans-serif;
+    font-style: normal;
+    text-decoration:none;
+}
+.resume {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    text-align: left;
+    font-size: 22;
+    font-family:sans-serif;
+    font-style: normal;
+    text-decoration: none;
+
+    color:#9B90A0
+}
