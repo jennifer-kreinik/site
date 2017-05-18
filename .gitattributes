@@ -1,0 +1,22 @@
+# Automatically convert to unix line endings for text files on commit, but use local settings for checkout
+* text auto
+*.css  text
+*.php  text
+*.html text
+*.js   text
+*.txt  text
+*.pl   text
+*.sh   text
+
+# force the Vagrant file to use unix EOL
+Vagrantfile text eol=lf
+
+# Set file extensions to be ignored wrt line endings
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.swf binary
+*.mp4 binary
+*.ico binary
+*.phar binary
