@@ -1,7 +1,7 @@
 <html>
   <head>
     <title> Jenny K's website</title>
-    <link rel="stylesheet" href='style.css'/>
+    <link rel="stylesheet" href="style.css?Time=<?php echo microtime()?>" />
   </head>
   <body >
 
@@ -11,19 +11,19 @@
 <div class = "active">
       <ul>
       <li>
-          <a href = index.html>
+          <a href = "index.php">
           Home
       </a> </li>
           <li>
-              <a href = blogpost1.html>
+              <a href = "blogpost1.php">
                   Contact
           </a> </li>
 
           <li>
-              <a href = Resume.html>
+              <a href = "Resume.php">
                Projects/Resume </a> </li>
         <li>
-            <a href = blogpost2.html>
+            <a href = "blogpost2.php">
                 Summer Blog </a> </li>
       </ul>
 </div>

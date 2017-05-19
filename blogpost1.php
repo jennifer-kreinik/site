@@ -1,7 +1,7 @@
 <html>
   <head>
     <title> Contact </title>
-    <link rel = "stylesheet" href = 'style.css'/>
+    <link rel="stylesheet" href="style.css?Time=<?php echo microtime()?>" />
   </head>
   <body>
       <h1>
@@ -9,19 +9,19 @@
           <div class = "active">
                 <ul>
                 <li>
-                    <a href = index.html>
+                    <a href = "index.php">
                     Home
                 </a> </li>
                     <li>
-                        <a href = blogpost1.html>
+                        <a href = "blogpost1.php">
                             Contact
                     </a> </li>
 
                     <li>
-                        <a href = Resume.html>
+                        <a href = "Resume.php">
                          Projects/Resume </a> </li>
                   <li>
-                      <a href = blogpost2.html>
+                      <a href = "blogpost2.php">
                           Summer Blog </a> </li>
                 </ul>
           </div>
@@ -31,7 +31,18 @@
 <h2> Contact
     <h4 class="contact">
         Email: <a href="mailto:jenny.kreinik@lessannoyingcrm.com">jenny.kreinik@lessannoyingcrm.com <br/> </a>
-        linkedIn: <a href="http://linkedin.com/in/jennifer-kreinik-731a63106"> Jennifer Kreinik</a>
+        linkedIn: <a href="http://linkedin.com/in/jennifer-kreinik-731a63106"> Jennifer Kreinik</a> <br/><br/><br/>
+
+        <p style= 'text-decoration: underline'> Leave any comments below </p>
+        <form method='post'>
+    Name: <input type='text' name='name' id='name' /><br />
+
+    Email: <input type='text' name='email' id='email' /><br />
+    Comment:<br />
+        <textarea name='comment' id='comment'></textarea><br />
+        <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+        <input type='submit' value='Submit' />
+        </form>
     </h4>
 <div class = "aboutMe">
     <p>

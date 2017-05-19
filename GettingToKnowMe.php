@@ -1,7 +1,7 @@
 <html>
   <head>
     <title> Getting to know me </title>
-    <link rel = "stylesheet" href = 'style.css'/>
+    <link rel="stylesheet" href="style.css?Time=<?php echo microtime()?>" />
   </head>
 <body>
     <h1>
@@ -9,19 +9,19 @@
         <div class = "active">
               <ul>
               <li>
-                  <a href = index.html>
+                  <a href = "index.php">
                   Home
               </a> </li>
                   <li>
-                      <a href = blogpost1.html>
+                      <a href = "blogpost1.php">
                           Contact
                   </a> </li>
 
                   <li>
-                      <a href = Resume.html>
+                      <a href = "Resume.php">
                        Projects/Resume </a> </li>
                 <li>
-                    <a href = blogpost2.html>
+                    <a href = "blogpost2.php">
                         Summer Blog </a> </li>
               </ul>
         </div>
@@ -40,9 +40,17 @@
          My favorite dessert is ice cream <br/>
          My least favorite forrd is chocolate <br/>
          I am scared of cats <br/>
- My favorite Disney movie is mulan <br/>
+ My favorite Disney movie is mulan <br/><br/><br/>
 
+ <p style= 'text-decoration: underline'> Leave any comments below </p>
+ Name: <input type='text' name='name' id='name' /><br />
 
+ Email: <input type='text' name='email' id='email' /><br />
+ Comment:<br />
+ <textarea name='comment' id='comment'></textarea><br />
+ <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+ <input type='submit' value='Submit' />
+ </form>
 
 </div></div>
 
