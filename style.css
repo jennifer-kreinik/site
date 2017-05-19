@@ -38,6 +38,14 @@ h2{
     font-family:monospace;
 
 }
+.AboutMeBullets{
+    color:#9B90A0;
+    text-align: center;
+    font-size: 27;
+    font-family:monospace;
+    text-decoration: underline;
+}
+
 img{
     display: block;
     margin: auto;
