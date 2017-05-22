@@ -4,11 +4,10 @@
     <link rel="stylesheet" href="style.css?Time=<?php echo microtime()?>" />
   </head>
 <body>
-    <h1>
-        My Blog! </h1>
+    <h1>My Blog!</h1>
         <div class = "active">
-              <ul>
-              <li>
+            <ul>
+            <li>
                   <a href = "index.php">
                   Home
               </a> </li>

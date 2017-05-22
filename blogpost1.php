@@ -2,6 +2,7 @@
   <head>
     <title> Contact </title>
     <link rel="stylesheet" href="style.css?Time=<?php echo microtime()?>" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
       <h1>
@@ -30,9 +31,6 @@
      <div style='max-width: 90%; background-color: #B3C3E4; padding:10px; margin:auto; border-radius:10px'>
 <h2> Contact
     <h4 class="contact">
-        Email: <a href="mailto:jenny.kreinik@lessannoyingcrm.com">jenny.kreinik@lessannoyingcrm.com <br/> </a>
-        linkedIn: <a href="http://linkedin.com/in/jennifer-kreinik-731a63106"> Jennifer Kreinik</a> <br/><br/><br/>
-
         <p style= 'text-decoration: underline'> Leave any comments below </p>
         <form method='post'>
     Name: <input type='text' name='name' id='name' /><br />
@@ -43,6 +41,12 @@
         <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
         <input type='submit' value='Submit' />
         </form>
+        <a href="mailto:jenny.kreinik@lessannoyingcrm.com" class="fa fa-envelope" aria-hidden="true"></a>
+
+        <a href="http://linkedin.com/in/jennifer-kreinik-731a63106" class="fa fa-linkedin"></a>
+         <br/><br/><br/>
+
+
     </h4>
 <div class = "aboutMe">
     <p>

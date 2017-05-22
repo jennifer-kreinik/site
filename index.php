@@ -29,7 +29,7 @@
 </div>
 <br/>
 <div style='max-width: 90%; background-color: #B3C3E4; padding:10px; margin:auto; border-radius:10px'>
-        <img src = "IMG_1458.jpg" alt = "pic of Jennifer Kreinik" >
+        <img src = "/images/IMG_1458.jpg" alt = "pic of Jennifer Kreinik" >
 
     <h2>
         About

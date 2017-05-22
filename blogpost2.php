@@ -38,7 +38,7 @@
             <a class="resume" href = "GettingToKnowMe.php">
                 Getting to Know Me </a> </li></ul> </div>
     <br/>
-    </div>
+
 <div class = "aboutMe">
     <p>
         Please feel free to reach out to me with any questions or concers
