@@ -3,12 +3,14 @@ function headerA($title, $head){
  echo "
  <html>
   <head>
+  <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon'>
       <title> $title </title>
       <link rel='stylesheet' href='style.css?Time=".microtime()."'/>
       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
        </head>
 <body>
-  <h1> $head </h1>
+  <h1>
+        <img class = 'logoBig' src='images/logoPGN.png' alt='logo'> $head </h1>
   <div class = 'active'>
   <ul>
     <li>

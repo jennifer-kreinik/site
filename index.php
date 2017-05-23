@@ -1,6 +1,6 @@
 <?php
 include('config/init.php');
- headerA("Jenny K's Website", "Welcome to Jennifer Kreinik's Website");
+ headerA("Jenny K's Website", "Jennifer Kreinik");
  ?>
         <img src = "/images/IMG_1458.jpg" alt = "pic of Jennifer Kreinik" >
 

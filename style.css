@@ -24,6 +24,10 @@ h1{
     font-style: bold;
     font-family: monospace;
 }
+.logoBig{
+    align: left;
+
+}
 h2{
     color:#9B90A0;
     text-align: center;
@@ -149,4 +153,11 @@ li a:hover {
 .fa-github-alt{
     background: white;
     color: black;
+}
+.logo{
+    font-size: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-style: normal;
+    color: white;
 }
