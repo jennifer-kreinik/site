@@ -1,34 +1,7 @@
-<html>
-  <head>
-    <title> Resume/Projects </title>
-    <link rel="stylesheet" href="style.css?Time=<?php echo microtime()?>" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-      <h1>
-          Projects/Resume</h1>
-          <div class = "active">
-                <ul>
-                <li>
-                    <a href = "index.php">
-                    Home
-                </a> </li>
-                    <li>
-                        <a href = "blogpost1.php">
-                            Contact
-                    </a> </li>
-
-                    <li>
-                        <a href = "Resume.php">
-                         Projects/Resume </a> </li>
-                  <li>
-                      <a href = "blogpost2.php">
-                          Summer Blog </a> </li>
-                </ul>
-          </div>
-
-     <br>
-     <div style='max-width: 90%; background-color: #B3C3E4; padding:10px; margin:auto; border-radius:10px'>
+<?php
+include('config/init.php');
+ headerA("Project/Resume", "Projects and Resumes");
+ ?>
 <h2> Projects
     <h4 class="projects">
         Mental Health and Wellness on Washington University's Campus (2017):
@@ -56,9 +29,16 @@
 </h4>
         <p class="description">
             I spent the summer leraning how to code and created this blog. Below are links to my GitHub and BitBucket (BitBucket
-            was used for my CompSci 131 class taken at Washington University Spring Semester 2017)
+            was used for my CompSci 131 class taken at Washington University Spring Semester 2017):
 
+        <br/>
+        <div class = buttons>
+            <a href="https://github.com/jennifer-kreinik" class="fa fa-github-alt" aria-hidden="true"></a>
+            <a  href="https://jkreinik@bitbucket.org/digshake/cse131-sp17-jkreinik.git" class="fa fa-bitbucket" aria-hidden="true"></a>
+        </div>
         </p>
+
+
     <h4 class="projects">
         Happy and Neutral Mood Induction on Math and Recall Tests (2016):
 </h4>
@@ -76,19 +56,11 @@
 <h2> Resume </h2>
     <ul class="resume" >
     <li >
-        <a href = "Resume.pdf" class="fa fa-file-pdf-o" aria-hidden="true"></a>
+        <a href = "Resume.pdf" class="fa fa-file-pdf-o" aria-hidden="true" style='font-size:30px' ></a>
             Click here to view my resume
         </li>
     </ul>
 <br/>
-<div class = "aboutMe">
-    <p>
-        To learn more about any of my previous projects please feel free to reach out to me
-    </p>
-</div>
-</div>
-<br/>
-    <h3>
-    Jennifer Kreinik: LessAnnoyingCRM Summer, 2017
-</body>
-</html>
+<?php
+footerA();
+?>

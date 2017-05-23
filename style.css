@@ -138,3 +138,15 @@ li a:hover {
     background: white;
     color: #535456;
 }
+.buttons{
+    font-size: 30px;
+    text-align: center;
+}
+.fa-bitbucket{
+    background: white;
+    color: #205081;
+}
+.fa-github-alt{
+    background: white;
+    color: black;
+}
