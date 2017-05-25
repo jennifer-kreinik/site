@@ -1,6 +1,6 @@
 <?php
 include('config/init.php');
- headerA("Project/Resume", "Projects and Resumes");
+echo echoHeaderHtml("Project/Resume", "Projects and Resumes");
  ?>
 <h2> Projects
     <h4 class="projects">
@@ -62,5 +62,5 @@ include('config/init.php');
     </ul>
 <br/>
 <?php
-footerA();
+    echo echoFooterHtml();
 ?>

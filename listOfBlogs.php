@@ -1,6 +1,6 @@
 <?php
 include('config/init.php');
- headerA("Blog", "My Blog!");
+    echo echoHeaderHtml("Blog", "My Blog!");
  ?>
 <h2> My Blog!
     <h4 class="projects">
@@ -10,9 +10,11 @@ include('config/init.php');
         <ul class="resume">
         <li class="resume">
             <?php
-            getPost();
+            echoPostLinkHtml();
             ?>
+<a href= "trial.php" >trial run </a>
         </div>
+
 <?php
-footerA();
+    echo echoFooterHtml();
 ?>

@@ -1,56 +1,49 @@
 
 body{
-    background-color:#9B90A0;
-    font-family:sans-serif;
-
+    background-color:#b3c0cb;
+    font-family: 'Gilda Display', serif;
 }
 ul {
     list-style-type: none;
     margin:0;
     padding:0;
     overflow: hidden;
-    background-color:#DEBEC2;
+    background-color:#92a6b9;
 
 }
 h1{
-    background-image: url("/images/IMG_7088.jpg");
-    background-repeat: no-repeat;
     color:#ffffff;
     margin: auto;
-    padding:8%;
+    padding: 3%;
     max-width:100%;
     text-align:center;
     font-size: 40px;
     font-style: bold;
-    font-family: monospace;
-}
-.logoBig{
-    align: left;
-
+    font-family: 'Gilda Display', serif;;
 }
 h2{
     color:#9B90A0;
     text-align: center;
     font-size: 35px;
-    font-family:monospace;
+    font-family: 'Gilda Display', serif;
     font-style: normal;
 }
 .aboutMe{
     color:#9B90A0;
+    background-color: #b3c0cb;
     text-align: center;
     font-size: 22px;
-    font-family:monospace;
+    font-family: 'Gilda Display', serif;
 
 }
 .AboutMeBullets{
     color:#9B90A0;
     text-align: center;
     font-size: 27px;
-    font-family:monospace;
+    font-family: 'Gilda Display', serif;
     text-decoration: underline;
 }
-
-img{
+.pic{
     display: block;
     margin: auto;
     width: 20%;
@@ -60,12 +53,12 @@ img{
     color:#9B90A0;
     text-align: center;
     font-size: 20px;
-    font-family:monospace;
+    font-family: 'Gilda Display', serif;
     font-style: normal;
 
 }
 h3{
-    background-color:#DEBEC2;
+    background-color:#92a6b9;
     color:#ffffff;
     padding:10px;
     max-width:100%;
@@ -76,7 +69,7 @@ h3{
     color:#9B90A0;
     text-align: left;
     font-size: 22px;
-    font-family:monospace;
+    font-family: 'Gilda Display', serif;
     font-style: normal;
     text-decoration: underline;
 }
@@ -86,8 +79,6 @@ li{
 }
 .active{
     background-color:#DEBEC2;
-
-
 }
 li a{
     display: block;
@@ -105,7 +96,7 @@ li a:hover {
     color:#9B90A0;
     text-align: left;
     font-size: 16px;
-    font-family:sans-serif;
+    font-family: 'Gilda Display', serif;
     font-style: normal;
     text-decoration:none;
 }
@@ -115,11 +106,11 @@ li a:hover {
     padding:0;
     text-align: left;
     font-size: 18px;
-    font-family:sans-serif;
+    font-family: 'Gilda Display', serif;
     font-style: normal;
     text-decoration: none;
     color:#9B90A0;
-    background-color: #B3C3E4;
+    background-color: #b3c0cb;
 }
 .fa {
     padding: 15px;
@@ -133,7 +124,6 @@ li a:hover {
 .fa:hover {
     opacity: 0.7;
 }
-
 .fa-linkedin{
     background: #007bb5;
     color: white;
@@ -160,4 +150,77 @@ li a:hover {
     text-decoration: none;
     font-style: normal;
     color: white;
+}
+.floating-box {
+    background-color: #b3c0cb;
+    float: left;
+    width: auto;
+    height: 150px;
+    margin: 10px;
+}
+.floating-box1 {
+    background-color: white;
+    display: inline-block;
+    float:left;
+    width: 5px;
+    height: 150px;
+    margin: 10px;
+}
+.floating-box2 {
+    background-color: #b3c0cb;
+    display: inline-block;
+    float:left;
+    text-align:justify;
+    width: 800px;
+    height: 150px;
+    margin: 10px;
+}
+ #scrlBtn{
+     position: sticky;
+     cursor:pointer;
+     background-color: #b3c0cb;
+     color: #546B7B;
+     border: #A4BCC9;
+     font-size: 30px;
+     text-align: center;
+
+ }
+ .imageContainer{
+     display:inline-block;
+     float:left;
+     width: 130px;
+     height: 150px;
+     margin: 50px;
+ }
+ .middleContainer {
+  transition: .5s ease;
+  opacity: 0;
+  position:absolute;
+  transform: translate(0%, 0%);
+  -ms-transform: translate(0%, 0%)
+}
+ .imageContainer:hover .albumCover{
+     opacity: 0.2;
+
+ }
+ .imageContainer:hover .middlecontainer{
+     opacity: 1;
+
+ }
+ .albumCover {
+  opacity: .9;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.middleText {
+  opacity: 1;
+  background-color: #283e3e;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 8.5px;
+  float:inherit;
 }

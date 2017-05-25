@@ -1,9 +1,9 @@
 <?php
 include('config/init.php');
- headerA("Jenny K's Website", "Jennifer Kreinik");
+echo echoHeaderHtml("Jenny K's Website", "Jennifer Kreinik");
  ?>
-        <img src = "/images/IMG_1458.jpg" alt = "pic of Jennifer Kreinik" >
-
+ <br/>
+        <img src = "/images/IMG_1458.jpg" alt = "pic of Jennifer Kreinik" class = "pic">
     <h2>
         About
 <div class = "aboutMe">
@@ -12,5 +12,5 @@ include('config/init.php');
               and the projects I have worked on.
       </p>
       <?php
-      footerA();
+      echo echoFooterHtml();
       ?>

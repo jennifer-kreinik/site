@@ -1,6 +1,6 @@
 <?php
 include('config/init.php');
- headerA("Contact", "More Information About Me");
+echo echoHeaderHtml("Contact", "More Information About Me");
  ?>
 <h2> Contact
     <h4 class="contact">
@@ -19,5 +19,5 @@ include('config/init.php');
          <br/><br/><br/>
     </h4>
 <?php
-footerA();
+echo echoFooterHtml();
 ?>
