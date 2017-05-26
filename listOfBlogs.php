@@ -12,7 +12,6 @@ include('config/init.php');
             <?php
             echoPostLinkHtml();
             ?>
-<a href= "trial.php" >trial run </a>
         </div>
 
 <?php
