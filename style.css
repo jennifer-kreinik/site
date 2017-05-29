@@ -188,7 +188,7 @@ li a:hover {
  .imageContainer{
      display:inline-block;
      float:left;
-     width: 130px;
+     width: 150px;
      height: 150px;
      margin: 50px;
  }
@@ -221,6 +221,7 @@ li a:hover {
   color: white;
   text-align: center;
   font-size: 16px;
-  padding: 10px 8.5px;
+  width: 130px;
+  padding: 10px;
   float:inherit;
 }

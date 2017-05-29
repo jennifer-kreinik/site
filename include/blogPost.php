@@ -1,52 +1,34 @@
 <?php
 include_once('config/init.php');
-function echoPostLinkHtml(){
-    $post = dbQuery("
+function blogTagOrganizer (){
+    $tagTypes = dbQuery("
             SELECT *
-            FROM blog_post
+            FROM tags
             ")->fetchALL();
-    for ($i = 0; $i<count($post); $i++){
-        $postId = $post[$i]['blogPostId'];
-        $postTitle = $post[$i]['title'];
-        $postBody= $post[$i]['body'];
-        $postGenre= $post[$i]['genre'];
-      echo  "$postGenre <br/><a class = 'resume' href = 'viewPost.php?blogPostId=". $postId."'>".$postTitle." </a><br/>";
+    $tagArray = array();
+        foreach ($tagTypes as $tagsOrganized){
+            if(!in_array($tagsOrganized['tagName'], $tagArray)){
+                array_push($tagArray, $tagsOrganized['tagName']);
+                echo "<a class = 'resume' href = 'listOfBlogs.php?tagPostId=". $tagsOrganized['tagId']."'>".$tagsOrganized['tagName']." </a>";
+                }
+            }
+        }
+function echoPostLinkHtml($postTagId){
+    $tagIdOrganizer = dbQuery("
+        SELECT * FROM blog_post
+        INNER JOIN blogPost_tags_linked ON blogPost_tags_linked.blogPostId = blog_post.blogPostId
+        INNER JOIN tags ON tags.tagId =  blogPost_tags_linked.tagId
+        WHERE tags.tagId = :varTagName
+        ", array("varTagName" => $postTagId))->fetchALL();
+        $tagPostArray = array();
+        foreach ($tagIdOrganizer as $tagPosts){
+            if(!in_array($tagPosts['tagName'], $tagPostArray)){
+                echo "<h4 class='projects'>".$tagPosts['tagName']."</h4>";
+                array_push($tagPostArray, $tagPosts['tagName']);
+            }
+            echo  "<a class = 'resume' href = 'viewPost.php?blogPostId=". $tagPosts['blogPostId']."'>".$tagPosts['title']." </a>";
+        }
     }
-}
-    //
-    // $Result = dbQuery("
-    //     SELECT *
-    //     FROM blog_post
-    //     ");
-    //     return $Result->fetch();
-  //       // ");
-  //       // return $Result->fetchALL();
-  //   $resultPostId = dbQuery("
-  //       SELECT *
-  //       FROM blog_post
-  //       WHERE title = :varTitle
-  //       ", array("varTitle"=>$postId));
-  //       return $resultPostId->fetchALL();
-  //   $resultTitle = dbQuery("
-  //       SELECT *
-  //       FROM blog_post
-  //       WHERE title = :varTitle
-  //       ", array("varTitle"=>$postTitle));
-  //       return $resultTitle->fetchALL();
-  //   $resultBody = dbQuery("
-  //       SELECT *
-  //       FROM blog_post
-  //       WHERE title = :varBody
-  //       ", array("varBody"=>$postBody));
-  //       return $resultBody->fetchALL();
-  //
-  //   for($i = 0; $i < count($Result); $i++){
-  //       // $postId = $$resultPostId[$i]['blogPostId'];
-  //       // $postTitle = $Result[$i]['title'];
-  //       // $postBody= $Result[$i]['body'];
-  //     echo  "<a class = 'resume' href = 'viewPost.php?postId=".$postId."'>".$postTitle." </a><br/>";
-  // }}
-
 function contentOfBlog($postId){
     $post = dbQuery("
         SELECT *
@@ -56,11 +38,15 @@ function contentOfBlog($postId){
         ->fetch();
     $postTitle = $post['title'];
     $postBody= $post['body'];
-    return "<h2>". $postTitle. "</h2>" . $postBody. "<br> <p style= 'text-decoration: underline'> Feel free to leave any comments below </p>
-     Name: <input type='text' name='name' id='name' /><br />
-    Email: <input type='text' name='email' id='email' /><br />
-     Comment:<br />
-     <textarea name='comment' id='comment'></textarea><br />
-     <input type='hidden' name='articleid' id='articleid' value=".$postId." />
-     <input type='submit' value='Submit' /> </form> </div>";
+    return "<h2>". $postTitle. "</h2>" . $postBody. "<br> <p style= 'text-decoration: underline'> Feel free to leave any comments below </p>";
+ }
+
+ function commentSection($postId){
+     echo "
+      Name: <input type='text' name='name' id='name' /><br />
+     Email: <input type='text' name='email' id='email' /><br />
+      Comment:<br />
+      <textarea name='comment' id='comment'></textarea><br />
+      <input type='hidden' name='articleid' id='articleid' value=".$postId." />
+      <input type='submit' value='Submit' /> </form> </div>";
  }
