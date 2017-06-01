@@ -1,29 +1,30 @@
 <?php
 include('config/init.php');
-    echo echoHeaderHtml("Getting to Know Me", "My Blog!");
-     ?>
-     <div class="imageContainer imageContainer-1">
-         <div class="middleContainer">
-             <div class="middleText">
-                Thunder <br/>
-                By: Imagine Dragons
-             </div>
-         </div>
-         <img src="images/thunder.png" alt="thunder" class="albumCover" style="height:150px; width:150px">
-     </div>
-     <div class="imageContainer imageContainer-2">
-         <div class="middleContainer">
-             <div class="middleText">
-                 Most Girls <br/>
-                 By: Hailee Stinfeld
-             </div>
-        </div>
-        <img src="images/mostGirls.png" alt="most girls" class="albumCover" style="height:150px; width:150px">
-     </div>
-     <br style ='clear: both'>
-     <!-- <div class='floating-box2'><br/>$head</div>  -->
+// $link = mysqli_connect("localhost", "cf", "password", "cf");
+// if(isset($_POST['submitItem'])){
+//     $postId = $_REQUEST['blogPostId'];
+//     $title = mysqli_real_escape_string($link, $_REQUEST['blogTitle']);
+//     $body = mysqli_real_escape_string($link, $_REQUEST['body']);
+
+    dbQuery("UPDATE blog_post SET title = :title, body= :body
+        WHERE blogPostId= :postId",
+        array('title'=>$_REQUEST['blogTitle'], 'body'=>$_REQUEST['body'],'postId'=>$_REQUEST['blogPostId']));
+            header('Location:adminListAllBlogPosts.php');
 
 
-     <?php
-    echo echoFooterHtml();
-  ?>
+
+    // if(isset($_POST['deleteItem'])){
+    //     $postId = $_REQUEST['blogPostId'];
+    //     $sql ="DELETE FROM blog_post
+    //         WHERE blogPostId= $postId";
+    //         if(mysqli_query($link, $sql)){
+    //             header('Location:adminListAllBlogPosts.php');
+    //         } else{
+    //             echo echoAdminHeaderHtml("Blog", "My Blog!")." <h4 class='contact'> ERROR: Unable to execute request $sql. " . mysqli_error($link)." </h4>". echoFooterHtml();
+    //         }
+    //         exit;
+    //     }
+
+// close connection
+mysqli_close($link);
+?>

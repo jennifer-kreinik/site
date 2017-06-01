@@ -7,8 +7,8 @@ include('config/init.php');
         <ul class="resume">
         <li class="resume">
             <?php
-            $postTagId = $_REQUEST['tagPostId'];
-            echoPostLinkHtml($postTagId);
+            $postTagName = $_REQUEST['tagPostId'];
+            echoPostLinkHtml($postTagName);
             ?>
         </div>
 
