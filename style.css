@@ -270,7 +270,7 @@ input[type=text], select, textarea{
     box-sizing: border-box;
     color: #637583;
 }
-input[type=submit] {
+input[type=submit], input[type=reset] {
     width: 80%;
     font-size: 16px;
     color: #637583;

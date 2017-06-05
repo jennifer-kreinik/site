@@ -4,7 +4,7 @@ include('config/init.php');
     $postId = $_REQUEST['blogPostId'];
 
     ?>
-        <h2> Add New Tag To Post </h2>
+        <h2> Add/Delete Tag To Post </h2>
 
 <?php
     echo addTagToPost($postId);

@@ -12,9 +12,16 @@ include('config/init.php');
             <br/><br/>
             <input type="hidden" name="articleid" id="articleid" />
             <input type="submit" name="submitItem" value="Add Tag" style="background-color: #b2e5a7"/>
-            <input type="submit" name="deleteItem" value="Delete Tag" style="background-color: #e5a7a7"/>
+            <br/><br/>
+            Delete Existing Tag (this will delete this tag from ALL posts):
+            <br/><select id = "tagName" name= "tagName">
+            <option disabled selected value> -- Select Tag -- </option>
+        <?php
+        echo tagDropDownMenu();
+        ?>
+        <option value="NULL">NULL</option>
+        <input type="submit" name="deleteItem" value="Delete Tag" style="background-color: #e5a7a7"/>
         </form> </div>
-
         <h4 class = "projects"> List of all tag names: </h4>
     <?php
 

@@ -6,12 +6,12 @@ echo echoHeaderHtml("Contact", "More Information About Me");
     <h4 class="contact">
         <p style= 'text-decoration: underline'> Please use the form to direct all questions or concerns </p>
         <form action="contactPageSQlinsert.php" method="post">
-    Name: <input type='text' name='name' id='name' /><br />
-    Email: <input type='text' name='email' id='email' /><br />
+    Name: <br/><input type="text" name="name" id="name" placeholder="John Doe" /><br />
+    Email:<br/> <input type="text" name="email" id="email" placeholder="john.doe@email.com" /><br />
     Questions/Concerns/Comments:<br />
-        <textarea name='comment' id='comment'></textarea><br />
-        <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
-        <input type='submit' value='Submit' />
+        <textarea name="comment" id="comment" placeholder="Comment, Questions, Concerns ...."></textarea><br />
+        <input type="hidden" name="articleid" id="articleid" value="<? echo $_GET['id'] ?>" />
+        <input type="submit" value="Submit" style="background-color: #b2e5a7"/>
         <input type="reset" value="Reset">
     </form>
 <!-- <?php

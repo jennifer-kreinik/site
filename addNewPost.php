@@ -7,9 +7,10 @@ include('config/init.php');
         <div class = "forms">
         </br>
             <form action="newBlogPost.php" method="post">
-            Blog Post Title: <br/><input type="text" name="blogTitle" id="blogTitle" value="Blog Title" /><br/><br/>
+            <input type="hidden" name="dateOfPost" id="dateOfPost" value="<?php getPostDateTime() ?> " />    
+            Blog Post Title: <br/><input type="text" name="blogTitle" id="blogTitle" placeholder="Blog Title" /><br/><br/>
             Blog Post:<br/>
-            <textarea name="body" id="body" style="height:200px" >Type blog post here...</textarea><br/><br/>
+            <textarea name="body" id="body" style="height:200px" placeholder ="Type blog post here..."></textarea><br/><br/>
             Tag(s): <br/><select id = "tagName" name= "tagName"><option disabled selected value> -- Select Tag -- </option>
     <?php
     echo tagDropDownMenu()

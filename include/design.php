@@ -81,6 +81,7 @@ function editBlogPost($postId){
         </br>
             <form action='insertEditedPost.php' method='post'>
             <input type='hidden' name='blogPostId' value='". $postId."'/>
+
             Blog Post Title:<br/> <input type='text' name='blogTitle' id='blogTitle' value='".$posts['title']. "' /><br/><br/>
             Blog Post:<br/>
             <textarea name='body' id='body' style='height:200px'>".$posts['body']. "</textarea><br />
@@ -129,21 +130,25 @@ function addNewTagName(){
         <input type='submit' value='Submit' style='background-color: #b2e5a7'/> </form> </div>
      </div>";
     }
-// function currentTagDropDownMenu($postId){
-//     $currentTags = dbQuery("
-//         SELECT *
-//         FROM blogPost_tags_linked
-//         WHERE blogPostId = :varPostId
-//         ", array("varPostId"=>$postId))
-//         ->fetch();
-//     $tagArray = array();
-//         foreach ($currentTags as $existingTags){
-//             if(!@$tagArray[$existingTags['tagName']]){
-//                 $tagArray[$existingTags['tagName']] = true;
-//                 }
-//                 echo "<option value='".$existingTags['tagName']."'>".$existingTags['tagName']."</option>";
-//             }
-//         }
+function currentTagDropDownMenu($postId){
+    $currentTags = dbQuery("
+        SELECT *
+        FROM blogPost_tags_linked
+        WHERE blogPostId = :varPostId
+        ", array("varPostId"=>$postId))
+        ->fetchALL();
+    $tagArray = array();
+    $returnDropDownMenu = "";
+        foreach ($currentTags as $existingTags){
+            if(!@$tagArray[$existingTags['tagName']]){
+                $tagArray[$existingTags['tagName']] = true;
+                }
+            $returnDropDownMenu .= "<option value='".$existingTags['tagName']."'>".$existingTags['tagName']."</option>";
+            echo $existingTags['tagName'];
+            }
+        return $returnDropDownMenu;
+
+}
 
 function addTagToPost($postId){
         $posts = dbQuery("
@@ -153,19 +158,32 @@ function addTagToPost($postId){
             ", array("varPostId"=>$postId))
             ->fetch();
         return "
-            <div class = 'aboutMe'>
+            <div class = 'forms'>
             </br>
                 <form action='addNewTagToExistingPost.php' method='post'>
                 <input type='hidden' name='blogPostId' value='". $postId."'/>
-                Tag(s): <br/><select id = 'tagName' name= 'tagName'>
-                <option disabled selected value> -- Select Tag -- </option>".
+                Add New Tag: <br/><select id = 'tagName' name= 'tagName'>
+                <option disabled selected value> -- Select Tag To Add -- </option>".
                 tagDropDownMenu().
                 "<option value='NULL'>NULL</option>
                 </select>
                 <input type='hidden' name='articleid' id='articleid' /><br/>
-                <input type='submit' name='submitItem' value='Add Tag' />
-                <input type='submit' name='deleteItem' value='Delete Post' />
+                <input type='submit' name='submitItem' value='Add Tag' style='background-color: #b2e5a7' />
+                <br/><br/>
+                Delete An Existing Tag: <br/><select id = 'tagName' name= 'tagName'>
+                <option disabled selected value> -- Select Tag To Delete -- </option>".
+                currentTagDropDownMenu($postId).
+                "<option value='NULL'>NULL</option>
+                </select>
+                <input type='submit' name='deleteItem' value='Delete Tag' style = 'background-color: #e5a7a7'/>
                 </form>
                 </div>
              </div>";
     }
+function getCommentDateTime(){
+    return date(DATE_RFC822);
+}
+
+function getPostDateTime(){
+    return date("l jS \of F Y h:i:s A");
+}

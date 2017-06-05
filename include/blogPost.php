@@ -46,11 +46,11 @@ function contentOfBlog($postId){
      <div class = 'formComments'>
      <form action='insert.php' method='post'>
      <input type='hidden' name='blogPostId' value=". $postId."/>
-      Name:<br> <input type='text' name='name' id='name' value = 'Name' /><br />
-     Email:<br> <input type='text' name='email' id='email' value = 'John-Doe@email.com' /><br />
-      Username:<br> <input type='text' name='username' id='username' value = 'username' /><br />
+      Name:<br> <input type='text' name='name' id='name' placeholder = 'John Doe' /><br />
+     Email:<br> <input type='text' name='email' id='email' placeholder = 'john.doe@email.com' /><br />
+      Username:<br> <input type='text' name='username' id='username' placeholder = 'username' /><br />
       Comment:<br />
-      <textarea name='comment' id='comment'>Type comment here...</textarea><br />
+      <textarea name='comment' id='comment' placeholder='Type comment here...'></textarea><br />
       <input type='hidden' name='articleid' id='articleid' value=".$postId." />
       <input type='submit' value='Post Comment' style = 'background-color: #b2e5a7' /> </form> </div>"
       ;
