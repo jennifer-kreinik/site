@@ -188,7 +188,7 @@ li a:hover {
  .imageContainer{
      display:inline-block;
      float:left;
-     width: 130px;
+     width: 150px;
      height: 150px;
      margin: 50px;
  }
@@ -221,6 +221,73 @@ li a:hover {
   color: white;
   text-align: center;
   font-size: 16px;
-  padding: 10px 8.5px;
+  width: 130px;
+  padding: 10px;
   float:inherit;
+}
+.commentStyle{
+    font-size: 25px;
+    background-color: #e2e6e9;
+    text-align: left;
+    /*#F7F8F9*/
+    /*#8ba6c1;*/
+
+}
+.fa-user-circle-o{
+    display:inline-block;
+    color:#637583;
+    width: 150px;
+    /*border-color:#F7F8F9;*/
+
+}
+.commentSection{
+    display: inline-block;
+    text-align: left;
+    color:#637583;
+    font-size: 18px;
+}
+.fa-pencil-square-o{
+    color:#637583;
+}
+.fa-tags{
+    color:#637583;
+}
+.forms{
+    color:#637583;
+    background-color: #b3c0cb;
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Gilda Display', serif;
+}
+input[type=text], select, textarea{
+    width: 80%;
+    font-size: 16px;
+    padding:12px 30px;
+    margin: 8px 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #637583;
+}
+input[type=submit], input[type=reset] {
+    width: 80%;
+    font-size: 16px;
+    color: #637583;
+    padding: 14px 20px;
+    margin: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.formComments{
+    width: 27%;
+    font-size: 14px;
+    padding:8px 10px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #637583;
 }

@@ -1,5 +1,5 @@
 <?php
-include('config/init.php');
+ include('config/init.php');
 echo echoHeaderHtml("Jenny K's Website", "Jennifer Kreinik");
  ?>
  <br/>

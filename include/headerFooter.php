@@ -31,7 +31,7 @@ function echoHeaderHtml($title, $head){
                 Projects/Resume
              </a> </li>
         <li>
-            <a href = 'listOfBlogs.php'>
+            <a href = 'tagListPage.php'>
                 Summer Blog
             </a> </li>
     </ul>
