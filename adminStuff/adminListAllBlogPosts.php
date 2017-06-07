@@ -4,6 +4,5 @@ include('config/init.php');
 ?>
     <h4 class = "projects"> List of all blog posts: </h4>
 <?php
-    echoAllPostsAdmin ();
-    echo echoAdminFooterHtml();
+    echo echoListOfAllPostsAdmin(). echoAdminFooterHtml();
  ?>

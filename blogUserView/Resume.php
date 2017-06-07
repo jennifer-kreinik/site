@@ -56,7 +56,7 @@ echo echoHeaderHtml("Project/Resume", "Projects and Resumes");
 <h2> Resume </h2>
     <ul class="resume" >
     <li >
-        <a href = "Resume.pdf" class="fa fa-file-pdf-o" aria-hidden="true" style='font-size:30px' ></a>
+        <a href = "/blogUserView/Resume-website.pdf" class="fa fa-file-pdf-o" aria-hidden="true" style='font-size:30px' ></a>
             Click here to view my resume
         </li>
     </ul>

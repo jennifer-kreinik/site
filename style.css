@@ -291,3 +291,7 @@ input[type=submit], input[type=reset] {
     box-sizing: border-box;
     color: #637583;
 }
+.error{
+    color: #f94a4a;
+    font-size: 14px
+}
