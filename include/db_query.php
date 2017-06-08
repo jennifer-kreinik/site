@@ -26,5 +26,5 @@ function dbQuery($query, $values=array()){
 
     $stmt = $pdo->prepare($query);
     $stmt->execute($values);
-    return $stmt->fetch();
+    return $stmt;
 }
