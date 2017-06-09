@@ -5,9 +5,14 @@ function echoHeaderHtml($title, $head){
     <head>
         <link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon'>
             <title> $title </title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' href='/style.css?Time=".microtime()."'/>
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
         <link href='https://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet'>
+        <script
+          src='https://code.jquery.com/jquery-3.2.1.min.js'
+          integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+          crossorigin='anonymous'></script>
     </head>
 <body>
     <h1>
@@ -33,6 +38,14 @@ function echoHeaderHtml($title, $head){
         <li>
             <a href = '/blogUserView/tagListPage.php'>
                 Summer Blog
+            </a> </li>
+        <li style = 'float: right'>
+            <a href = '/blogUserView/login.php'>
+                Login
+            </a> </li>
+        <li style = 'float: right'>
+            <a href = '/blogUserView/signUp.php'>
+                Sign Up
             </a> </li>
     </ul>
 </div>";}
@@ -64,9 +77,14 @@ function echoAdminHeaderHtml($title, $head){
         <head>
             <link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon'>
                 <title> $title </title>
+
             <link rel='stylesheet' href='/style.css?Time=".microtime()."'/>
             <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
             <link href='https://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet'>
+            <script
+              src='https://code.jquery.com/jquery-3.2.1.min.js'
+              integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+              crossorigin='anonymous'></script>
         </head>
     <body>
         <h1>
@@ -93,9 +111,9 @@ function echoAdminHeaderHtml($title, $head){
                 <a href = '/adminStuff/addNewPost.php'>
                     New Post
                 </a> </li>
-            <li>
-                <a href = '/index.php'>
-                    OG Site
+            <li style = 'float: right'>
+                <a href = '/adminStuff/logout.php'>
+                    Logout
                 </a> </li>
         </ul>
     </div>";}

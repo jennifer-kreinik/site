@@ -1,5 +1,6 @@
 <?php
 include('config/init.php');
+verifyUser();
 if(isset($_REQUEST['submitItem'])){
     $errors = array();
 
@@ -14,7 +15,8 @@ if(isset($_REQUEST['submitItem'])){
         $errors['tagName'] = "*Required*";
     }
     if(sizeof($errors) == 0){
-        echo addPostQuery($_REQUEST['blogTitle'], $_REQUEST['body'], $_REQUEST['tagName']);
+        addPostQuery($_REQUEST['blogTitle'], $_REQUEST['body'], $_REQUEST['tagName']);
+        header('Location:/adminStuff/addNewPost.php');
         exit;
     }
 }
@@ -26,10 +28,10 @@ echo echoAdminHeaderHtml("Admin Section", "Edit Post").
             singleLineTextBox('Blog Post Title', 'blogTitle','Blog Title', @$_REQUEST['blogTitle'], @$errors['blogTitle'])."
             ".textareaTextBox ('Blog Post', 'body', 'Type blog post here...', @$_REQUEST['body'], @$errors['body'])."
             ".dropDownMenu ('Tag(s)', 'tagName', 'Select Tag', tagDropDownMenu(), @$errors['tagName'])."
-            <input type='hidden' name='articleid' id='articleid' />".
-            submitButton('Create New Post'). "</form> ".
+            ". submitButton('Create New Post'). "</form> ".
             echoAdminFooterHtml();
 //  echo "<pre>
 // ";
 // var_dump($_REQUEST);
 // echo "</pre>";
+//<input type='hidden' name='articleid' id='articleid' />

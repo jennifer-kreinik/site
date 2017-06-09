@@ -13,7 +13,7 @@ function echoCommentHtml($postId){
                 array_push($commentPostArray, $postComments['blogPostId']);
             }
             $returncommentPostArray .= "<div class='commentStyle'><i class='fa fa-user-circle-o' aria-hidden='true'><br/>".$postComments['username']." </i>
-                <p class='commentSection'> ".$postComments['comment']."<br/>".$postComments['dateComment']."</p></div><br/>";
+                <p class='commentSection' > ".$postComments['comment']."<br/>".$postComments['dateComment']."</p></div><br/>";
         }
         return $returncommentPostArray;
     }
