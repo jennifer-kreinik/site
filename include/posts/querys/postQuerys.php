@@ -23,11 +23,14 @@ function deleteExisitingPost($postId){
  header('Location:/adminStuff/adminListAllBlogPosts.php');
  }
 function commentQuery($name, $email, $username, $comment, $postId){
-    dbQuery("INSERT INTO blogComments (name, email, username, comment, blogPostId, dateComment)
+        dbQuery("INSERT INTO blogComments (name, email, username, comment, blogPostId, dateComment)
         VALUES (:name, :email, :username, :comment, :postId, :dateComment)",
         array('name'=>$name, 'email'=>$email, 'username'=>$username,
                 'comment'=>$comment, 'postId'=>$postId, 'dateComment'=>getPostDateTime()));
+    $commentId=dbQuery("SELECT LAST_INSERT_ID() FROM blogComments")->fetch();
+        // header('Location:/blogUserView/viewPost.php?blogPostId='.$postId.'#comment_'.$commentId["LAST_INSERT_ID()"]);
 
-            echo echoHeaderHtml("Blog", "My Blog!")." <br/></br><h4 class='contact'> Comment successfully posted! <br/>
-                <a href='/blogUserView/viewPost.php?blogPostId=".$postId."'> Click Here to return to post</a> </h4></br>". echoFooterHtml();
+            // echo echoHeaderHtml("Blog", "My Blog!")." <br/></br><h4 class='contact'> Comment successfully posted! <br/>
+            //     <a href='/blogUserView/viewPost.php?blogPostId=".$postId."'> Click Here to return to post</a> </h4></br>". echoFooterHtml();
  }
+ //

@@ -1,0 +1,457 @@
+/*cooking palate colors: #bc9d6e, #e9e9e9, #3d4400, #cbbaa8*/
+body{
+    background-color:#e9e9e9;
+    font-family: 'Esteban', serif;
+
+}
+h1{
+    color:#1e1514;
+    margin: auto;
+    padding-top: 1.5%;
+    max-width:100%;
+    text-align:center;
+    font-size: 55px;
+    font-family: 'Monoton';
+     word-spacing: 13px;
+}
+/*.trialRun{
+
+    background-image: url(/images/carvel.jpg);
+    background-size: 550px;
+    background-position: top;
+
+}
+.tester{
+    text-align: right;
+    font-size: 46px;
+}*/
+.header{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    text-align: center;
+
+}
+ul {
+    list-style-type:none;
+    overflow: hidden;
+    background-color:#e9e9e9;
+
+}
+li{
+    background-color:#e9e9e9;
+    float: left;
+
+}
+li a{
+    display:inline-block;
+    color:#1e1514;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+
+}
+li a:hover {
+    border: 2px solid #4b6600;
+    color: #7a5652;
+
+}
+.login{
+    float:left;
+    width:45%;
+    text-align: center;
+    margin-left: 5%
+}
+.signUp{
+    float: left;
+    text-align: center;
+    width:45%;
+}
+.formLogin{
+    text-align: center;
+}
+input[type=text], select, input[type=password], textarea{
+    width: 50%;
+    font-size: 16px;
+    font-family: 'Esteban', serif;
+    padding:12px 8px;
+    margin: 8px 12px;
+    display: inline-block;
+    border: .5px solid #4b6600;
+    box-sizing: border-box;
+    color: #1e1514;
+}
+.greenButton{
+    width: 50%;
+    font-family: 'Esteban', serif;
+    font-size: 16px;
+    color: #e9e9e9;
+    padding: 14px 45px;
+    margin: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.seperatorLogin{
+    background-color: white;
+    display: inline-block;
+    float:left;
+    width: 5px;
+    height: 600px;
+    margin: 10px
+}
+.newRecipe{
+    width:100%;
+    margin-left: 25%;
+    float: center;
+}
+.title{
+    text-align: center;
+}
+#groceryUL{
+    margin: 0;
+    padding: 0;
+
+}
+#groceryUL li {
+    /*background:#cbbaa8;*/
+    position: relative;
+    margin-left: 13%;
+    width: 74%;
+    padding: .3%;
+    font-size: 20px;
+    transition: 0.2s;
+    font-family: 'Permanent Marker', cursive;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#groceryUL li:hover{
+    color: #eeeeee;
+    /*background-color: #633141;*/
+    border: none;
+
+}
+.shoppingList{
+    /*background-color: #633141;*/
+
+    color: #1e1514;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 24px;
+}
+
+.shoppingList:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.addBtn {
+    display: inline-block;
+    padding: 12px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #1e1514;;
+    float: center;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-family: 'Esteban', serif;
+    }
+
+.addBtn:hover {
+    background-color: #bbb;
+}
+.recipe{
+    color:#6f5b3e;
+}
+.recipeHeader{
+    text-align: center;
+    /*font-family:'Montserrat', sans-serif;*/
+    font-size: 26px;
+}
+.ingredients{
+    margin-left:5%;
+    display: inline-block;
+    float:left;
+    text-align: left;
+    font-size: 16px;
+    width: 40%;
+}
+.image{
+    margin-left:10%;
+    margin-right: 5%;
+    display: inline-block;
+    float:left;
+    text-align: left;
+    max-width: 40%;
+    max-height: 350px;
+}
+.instructions{
+    margin:5%;
+    float:left;
+    text-align: left;
+    font-size: 16px;
+    width: 90%;
+}
+.favorites{
+    margin-left: 25%;
+    text-align: left;
+    font-size: 18px;
+}
+.tag1{
+    font-family: 'Give You Glory';
+    font-size: 26px;
+    color: #1e1514;
+    text-decoration: none;
+    text-align: center;
+}
+.tag2{
+    font-family: 'Bungee Shade', cursive;
+    font-size: 28px;
+    color: #1e1514;
+    text-decoration: none;
+    text-align: center;
+}
+.tag3{
+    font-family:'Montserrat', sans-serif;
+    font-size: 25px;
+    color: #1e1514;
+    text-decoration: none;
+    text-align: center;
+}
+.tag4{
+    font-family: 'Dancing Script', cursive;
+    font-size: 29px;
+    color: #1e1514;
+    text-decoration: none;
+    text-align: center;
+}
+.tag5{
+    font-family: 'Ewert', cursive;
+    font-size: 26px;
+    color: #1e1514;
+    text-decoration: none;
+    text-align: center;
+}
+.tag6{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    color: #1e1514;
+    text-decoration: none;
+    text-align: center;
+}
+.tag7{
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+    color: #1e1514;
+    text-decoration: none;
+    text-align: center;
+}
+.recipeDesign{
+    color: #1e1514;
+    text-decoration: none;
+}
+.recipeList{
+    font-size: 18px;
+    margin-left:3.5%;
+}
+
+.fa-asterisk{
+    color: #4b6600;
+}
+/* bellow this point is everything that I am using
+to try to get cool jquery effects on my homepage*/
+
+
+.ch-grid {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.ch-grid:after,
+.ch-item:before {
+	content: '';
+    display: table;
+}
+
+.ch-grid:after {
+	clear: both;
+}
+
+.ch-grid li {
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+    text-align: center;
+	margin: 20px;
+
+}
+.ch-item {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	cursor: default;
+	box-shadow:
+		inset 0 0 0 16px rgba(255,255,255,0.6),
+		0 1px 2px rgba(0,0,0,0.1);
+	transition: all 0.4s ease-in-out;
+}
+.ch-img-1 {
+	background-image: url(/images/foodie.jpg);
+    background-size: 250px;
+
+}
+
+.ch-img-3 {
+	background-image: url(/images/cookingPics/iceCreamPic.jpg);
+    background-size: 250px;
+    background-position: top;
+
+}
+
+.ch-img-2 {
+	background-image: url(/images/pizza.jpg);
+    background-size: 280px;
+    background-position: center;
+}
+.ch-info {
+	position: absolute;
+	background: rgba(63,147,147, 0.8);
+	width: inherit;
+	height: inherit;
+	border-radius: 50%;
+	overflow: hidden;
+	opacity: 0;
+	transition: all 0.4s ease-in-out;
+	transform: scale(0);
+}
+.ch-info h3 {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 18px;
+	margin: 22px 30px;
+	padding: 45px 0 0 0;
+	height: 140px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	text-shadow:
+		0 0 1px #fff,
+		0 1px 2px rgba(0,0,0,0.3);
+}
+.ch-info p {
+	color: #fff;
+	padding: 10px 5px;
+	font-style: italic;
+	margin: 0 30px;
+	font-size: 12px;
+	border-top: 1px solid rgba(255,255,255,0.5);
+	opacity: 0;
+	transition: all 1s ease-in-out 0.4s;
+}
+.ch-info p a {
+	display: block;
+	color: rgba(255,255,255,0.7);
+	font-style: normal;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 9px;
+	letter-spacing: 1px;
+	padding-top: 4px;
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.ch-info p a:hover {
+	color: rgba(255,242,34, 0.8);
+}
+.ch-item:hover {
+	box-shadow:
+		inset 0 0 0 1px rgba(255,255,255,0.1),
+		0 1px 2px rgba(0,0,0,0.1);
+}
+.ch-item:hover .ch-info {
+	transform: scale(1);
+	opacity: 1;
+}
+.ch-item:hover .ch-info p {
+	opacity: 1;
+}
+.portholes{
+    position:relative;
+    display: flex;
+    text-align: center;
+    margin: 18.5%;
+    margin-top: 0;
+}
+#mins, #secs{
+    width: 12%;
+    font-size: 16px;
+    font-family: 'Esteban', serif;
+    padding:8px;
+    margin: 8px 12px;
+    display: inline-block;
+    border: .5px solid #4b6600;
+    box-sizing: border-box;
+    color: #1e1514;
+}
+.Timer{
+    text-align: left;
+    font-size: 20px;
+    width: 40%;
+}
+/*WORKING SEARCH BAR CSS TRIAL*/
+
+#myInput {
+    background-image: url('/images/cookingPics/searchBar.png');
+    background-position: 6px 9.5px;
+    background-repeat: no-repeat;
+    width: 50%;
+    font-size: 18px;
+    padding: 15px 20px 15px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 2%;
+
+
+}
+
+#myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding:9px; /* Add some padding */
+    text-decoration: none;
+    font-size: 18px;
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+
+
+}
+
+#myUL li a.titleSearch {
+    background-color: #e2e2e2; /* Add a darker background color for headers */
+    cursor: default; /* Change cursor style */
+}
+
+#myUL li a:hover:not(.titleSearch) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+/*END OF SEARCH BAR*/
+
+/*#faves{
+    color:#bfbfbf;
+}*/

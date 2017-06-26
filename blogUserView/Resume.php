@@ -1,8 +1,8 @@
 <?php
 include('config/init.php');
-echo echoHeaderHtml("Project/Resume", "Projects and Resumes");
+echo echoHeaderHtml("Research/Resume", "Research and Resumes");
  ?>
-<h2> Projects
+<h2> Research
     <h4 class="projects">
         Mental Health and Wellness on Washington University's Campus (2017):
 </h4>

@@ -33,11 +33,15 @@ function echoHeaderHtml($title, $head){
             </a> </li>
         <li>
             <a href = '/blogUserView/Resume.php'>
-                Projects/Resume
+                Research/Resume
              </a> </li>
         <li>
             <a href = '/blogUserView/tagListPage.php'>
                 Summer Blog
+            </a> </li>
+        <li>
+            <a href = '/cookingWebsite/homepage.php'>
+                Cooking Website
             </a> </li>
         <li style = 'float: right'>
             <a href = '/blogUserView/login.php'>
@@ -55,21 +59,27 @@ return "
     <p>
         Please feel free to reach out to me with any questions or concers
     </p>
-    <button onclick = 'topFunction()' id ='scrlBtn' title='Scroll to top'>
+    <button onclick = 'topFunction()' id ='scrlBtn' title='Scroll to Top'>
         <i class='fa fa-arrow-up' aria-hidden='true'></i>
     </button>
-    </h2>
-</div> </div>
-    <br/>
-    <h3 >
-     Jennifer Kreinik: LessAnnoyingCRM Summer, 2017
-     <br/>
-<div class='logo'>
-    logo: <a href='http://logomakr.com' title='Logo Maker'>LogoMaker.com</a>
-</div>
-    </h3>
-    </body>
-</html>";
+    <script type='text/javascript'>
+        function topFunction(){
+            document.body.scrollTop = 0; // For Chrome, Safari and Opera
+            document.documentElement.scrollTop = 0; // For IE and Firefox
+        }
+    </script>
+        </h2>
+    </div> </div>
+        <br/>
+        <h3 >
+         Jennifer Kreinik: LessAnnoyingCRM Summer, 2017
+         <br/>
+    <div class='logo'>
+        logo: <a href='http://logomakr.com' title='Logo Maker'>LogoMaker.com</a>
+    </div>
+        </h3>
+        </body>
+    </html>";
 }
 function echoAdminHeaderHtml($title, $head){
      return "

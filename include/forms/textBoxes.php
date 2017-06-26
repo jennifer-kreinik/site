@@ -12,8 +12,14 @@ function dropDownMenu ($textTitle, $tagName, $disabledOption, $dropDownChoices,$
 function submitButton($buttonName){
     return "<input type='submit' name = 'submitItem' value='$buttonName' style='background-color: #b2e5a7'/>";
 }
+
 function deleteButton($buttonName){
     return "<input type='submit' name = 'deleteItem' value='$buttonName' style='background-color: #e5a7a7'/> </form> </div>";
 }
-
+function loginButtonCooking($buttonName){
+    return "<input type='submit' class='greenButton' name = 'submitItem' value='$buttonName' style='background-color: #4b6600'/>";
+}
+function signUpButtonCooking($buttonName){
+    return "<input type='submit' class='greenButton' name = 'signUp' value='$buttonName' style='background-color: #4b6600'/>";
+}
  ?>
