@@ -10,11 +10,11 @@ function dropDownMenu ($textTitle, $tagName, $disabledOption, $dropDownChoices,$
             $dropDownChoices. "<option value='NULL'>NULL</option></select><br/><br/>";
 }
 function submitButton($buttonName){
-    return "<input type='submit' name = 'submitItem' value='$buttonName' style='background-color: #b2e5a7'/>";
+    return "<input type='submit' name = 'submitItem' id='submitItem' value='$buttonName' style='background-color: #b2e5a7'/>";
 }
 
 function deleteButton($buttonName){
-    return "<input type='submit' name = 'deleteItem' value='$buttonName' style='background-color: #e5a7a7'/> </form> </div>";
+    return "<input type='submit' name = 'deleteItem' id='deleteItem' value='$buttonName' style='background-color: #e5a7a7'/> </form> </div>";
 }
 function loginButtonCooking($buttonName){
     return "<input type='submit' class='greenButton' name = 'submitItem' value='$buttonName' style='background-color: #4b6600'/>";

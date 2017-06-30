@@ -14,6 +14,7 @@ function echoCookingHeaderHtml($title){
           src='https://code.jquery.com/jquery-3.2.1.min.js'
           integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
           crossorigin='anonymous'></script>
+
     </head>
 
 <body>
@@ -53,6 +54,7 @@ function yourCookbookEchoHtmlHeader($title){
         <link href='https://fonts.googleapis.com/css?family=Bungee+Shade|Esteban|Monoton|Montserrat' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Bungee+Shade|Dancing+Script|Ewert|Give+You+Glory|Permanent+Marker|VT323' rel='stylesheet'>
           <script src='https://code.jquery.com/jquery-3.2.1.min.js'integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+         
     </head>
 
 <body>
@@ -77,6 +79,10 @@ function yourCookbookEchoHtmlHeader($title){
         <li>
             <a href = '/cookingWebsite/yourCookbook/groceryList.php'>
                 Shopping List
+            </a> </li>
+        <li>
+            <a href = '/cookingWebsite/yourCookbook/addTags.php'>
+                    Tags
             </a> </li>
         <li>
             <a href = '/cookingWebsite/yourCookbook/logoutCooking.php'>

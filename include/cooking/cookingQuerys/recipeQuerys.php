@@ -118,3 +118,22 @@ function echoRecipeLinkHtml($recipeTagName, $styleChoice){
         }
         return $returnTaggedPosts;
     }
+function echoRecipeLinkHtmlCookbook($recipeTagName, $styleChoice){
+        $tagIdOrganizer = dbQuery("SELECT * FROM recipes
+            INNER JOIN recipe_tag_linked ON recipe_tag_linked.recipeId = recipes.recipeId
+            INNER JOIN recipeTags ON recipeTags.recipeTagName =  recipe_tag_linked.recipeTagName
+            WHERE recipeTags.recipeTagId= :recipeTagName
+            ORDER BY dateOfPost DESC
+            ", array("recipeTagName" => $recipeTagName))->fetchALL();
+            $tagPostArray = array();
+            $returnTaggedPosts="";
+            foreach ($tagIdOrganizer as $tagPosts){
+                if(!@$tagPostArray[$tagPosts['recipeTagName']]){
+                    $tagPostArray[$tagPosts['recipeTagName']] = true;
+                    echo "<h2 class='$styleChoice'>".$tagPosts['recipeTagName']."</h2>";
+                }
+            $returnTaggedPosts .= "<div class='recipeList ><i class='fa fa-asterisk' aria-hidden='true'></i> <a href ='/cookingWebsite/yourCookbook/theRecipeCookbook.php?recipeId=".
+                $tagPosts['recipeId']."' class='recipeDesign' > ". $tagPosts['title']." </a></div>";
+            }
+            return $returnTaggedPosts;
+}

@@ -25,6 +25,6 @@ if ($recipeTagName == 7){
     $styleChoice='tag7';
 };
 
-echo echoRecipeLinkHtml($recipeTagName, $styleChoice);
+echo echoRecipeLinkHtmlCookbook($recipeTagName, $styleChoice);
 ?>
 </h2><br/></div>

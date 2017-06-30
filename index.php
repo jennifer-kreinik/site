@@ -11,6 +11,6 @@ echo echoHeaderHtml("Jenny K's Website", "Jennifer Kreinik");
           I am majoring in Cognitive Neuroscience with a minor in Anthroplogy. Please explore my website to learn more about me
               and the projects I have worked on.
       </p>
-      <?php
-      echo echoFooterHtml();
-      ?>
+<?php
+     echo echoFooterHtml();
+?>

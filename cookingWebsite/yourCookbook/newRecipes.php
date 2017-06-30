@@ -22,17 +22,24 @@ if(isset($_REQUEST['submitItem'])){
         exit;
     }
 }
+?>
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
 
+<?php
 echo    yourCookbookEchoHtmlHeader("New Recipe").
         "</div><h2 class='title'> Add New Recipe: </h2><div class = 'newRecipe'></br>
             <form action='' method='post'>
             <input type='hidden' name='dateOfPost' id='dateOfPost' value=".getPostDateTime(). " />".
-            singleLineTextBox('Recipe Title', 'title','Title', @$_REQUEST['title'], @$errors['title'])."
+            singleLineTextBox('Recipe Title', 'title','Title', @$_REQUEST['title'], @$errors['title'])."<div class='recipeText'>
             ".textareaTextBox ('Ingredients', 'ingredients', 'Type ingrdients here...(hit enter after each ingredient)',
             @$_REQUEST['ingredients'], @$errors['ingredients'])."
             ".textareaTextBox ('Instructions', 'body', 'Type instructions here...', @$_REQUEST['body'], @$errors['body'])."
-            Tag: ".returnRequireStatement(@$errors['recipeTagName'])."<br/><select id = 'recipeTagName' name= 'recipeTagName'>
-            <option disabled selected value> ---Select Tag --- </option>
+            </div>Select Category: ".returnRequireStatement(@$errors['recipeTagName'])."<br/><select id = 'recipeTagName' name= 'recipeTagName'>
+            <option disabled selected value> ---Select Category --- </option>
             <option value='Breakfast'>Breakfast </option>
             <option value='Brunch'>Brunch </option>
             <option value='Lunch'>Lunch </option>

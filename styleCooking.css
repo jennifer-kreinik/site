@@ -105,6 +105,11 @@ input[type=text], select, input[type=password], textarea{
     margin-left: 25%;
     float: center;
 }
+.recipeText{
+    width: 50%;
+    margin-left: 1%;
+    float: center;
+}
 .title{
     text-align: center;
 }
@@ -451,7 +456,3 @@ to try to get cool jquery effects on my homepage*/
     background-color: #eee; /* Add a hover effect to all links, except for headers */
 }
 /*END OF SEARCH BAR*/
-
-/*#faves{
-    color:#bfbfbf;
-}*/
