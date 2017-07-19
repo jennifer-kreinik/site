@@ -3,7 +3,7 @@ include('config/init.php');
     echo echoCookingHeaderHtml("Homepage");
  ?>
  <br/>
- <div class="portholes">
+ <!-- <div class="portholes"> -->
  <ul class="ch-grid">
 	<li>
 		<div class="ch-item ch-img-1">
@@ -37,4 +37,4 @@ include('config/init.php');
         <h1 class='tester'>
         <br/><br/><br/><br/>the <br/>  foodie <br/>   JENeration <br/><br/><br/><br/><br/><br/><br/>
     </h1></div> -->
-</div>
+<!-- </div> -->

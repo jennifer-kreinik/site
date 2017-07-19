@@ -4,8 +4,8 @@ verifyUserCooking();
 echo yourCookbookEchoHtmlHeader("All Recipes");
 $recipeTags = recipeTagOrganizer ();
 ?>
-<div  class='title'>
- <h2 style='text-decoration: underline'> All Recipes </h2>
+<div  class='title' style='text-decoration: none'>
+ <h2 style='text-decoration: underline; color:#1e1514'><a href = '/cookingWebsite/yourCookbook/recipeCategory.php?recipeTagId=8' style='text-decoration: none'/>All Recipes </a></h2>
 
 <a href = '/cookingWebsite/yourCookbook/recipeCategory.php?recipeTagId=1' class= 'tag1'/> Breakfast </a><br/>
 <a href = '/cookingWebsite/yourCookbook/recipeCategory.php?recipeTagId=2 ' class= 'tag2' /> Brunch </a><br/>

@@ -9,7 +9,7 @@ if(isset($_REQUEST['deleteItem'])){
         $errors2['recipeIngredientName'] = "*Required*";
     }
     if(sizeof($errors2) == 0){
-        echo deleteTagFromExistingRecipe($_REQUEST['recipeIngredientName'], $_REQUEST['recipeId']);
+        deleteTagFromExistingRecipes($_REQUEST['recipeIngredientName'], $_REQUEST['recipeId']);
         exit;
     }
     else{

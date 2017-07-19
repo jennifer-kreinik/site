@@ -39,6 +39,7 @@ function echoCookingHeaderHtml($title){
             <a href = '/index.php'>
                 Return To Blog
             </a> </li>
+        </ul>
 
 </div>";}
 
@@ -54,7 +55,7 @@ function yourCookbookEchoHtmlHeader($title){
         <link href='https://fonts.googleapis.com/css?family=Bungee+Shade|Esteban|Monoton|Montserrat' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Bungee+Shade|Dancing+Script|Ewert|Give+You+Glory|Permanent+Marker|VT323' rel='stylesheet'>
           <script src='https://code.jquery.com/jquery-3.2.1.min.js'integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
-         
+
     </head>
 
 <body>

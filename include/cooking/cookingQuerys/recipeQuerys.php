@@ -118,13 +118,35 @@ function echoRecipeLinkHtml($recipeTagName, $styleChoice){
         }
         return $returnTaggedPosts;
     }
-function echoRecipeLinkHtmlCookbook($recipeTagName, $styleChoice){
+function echoALLRecipeLinkHtml($styleChoice){
         $tagIdOrganizer = dbQuery("SELECT * FROM recipes
             INNER JOIN recipe_tag_linked ON recipe_tag_linked.recipeId = recipes.recipeId
             INNER JOIN recipeTags ON recipeTags.recipeTagName =  recipe_tag_linked.recipeTagName
-            WHERE recipeTags.recipeTagId= :recipeTagName
             ORDER BY dateOfPost DESC
-            ", array("recipeTagName" => $recipeTagName))->fetchALL();
+            ") ->fetchALL();
+            $tagPostArray = array();
+            $returnTaggedPosts="";
+            echo "<h2 class='$styleChoice'>All Recipes</h2>";
+            foreach ($tagIdOrganizer as $tagPosts){
+                if(!@$tagPostArray[$tagPosts['recipeTagName']]){
+                    $tagPostArray[$tagPosts['recipeTagName']] = true;
+                }
+            $returnTaggedPosts .= "<div class='recipeList ><i class='fa fa-asterisk' aria-hidden='true'></i> <a href ='/cookingWebsite/theRecipe.php?recipeId=".
+                $tagPosts['recipeId']."' class='recipeDesign' > ". $tagPosts['title']." </a></div>";
+            }
+            return $returnTaggedPosts;
+}
+function echoRecipeLinkHtmlCookbook($recipeTagName, $styleChoice, $loginId){
+        $tagIdOrganizer = dbQuery("SELECT * FROM recipes
+            INNER JOIN scores ON scores.recipeId = recipes.recipeId
+            INNER JOIN recipe_tag_linked ON recipe_tag_linked.recipeId = scores.recipeId
+            INNER JOIN recipeTags ON recipeTags.recipeTagName =  recipe_tag_linked.recipeTagName
+            -- INNER JOIN scores ON recipeTags.recipeTagId =  scores.recipeId
+            -- INNER JOIN scores ON scores.recipeId = recipe_tag_linked.recipeId
+            WHERE recipeTags.recipeTagId = :recipeTagName AND scores.loginId = :loginId
+            -- ORDER BY dateOfPost DESC
+            ORDER BY score DESC
+            ", array("recipeTagName" => $recipeTagName, "loginId" => $loginId))->fetchALL();
             $tagPostArray = array();
             $returnTaggedPosts="";
             foreach ($tagIdOrganizer as $tagPosts){
@@ -133,6 +155,29 @@ function echoRecipeLinkHtmlCookbook($recipeTagName, $styleChoice){
                     echo "<h2 class='$styleChoice'>".$tagPosts['recipeTagName']."</h2>";
                 }
             $returnTaggedPosts .= "<div class='recipeList ><i class='fa fa-asterisk' aria-hidden='true'></i> <a href ='/cookingWebsite/yourCookbook/theRecipeCookbook.php?recipeId=".
+                $tagPosts['recipeId']."' class='recipeDesign' > ". $tagPosts['title']." </a></div>";
+            }
+            return $returnTaggedPosts;
+}
+function echoALLRecipeLinkHtmlCookbook($styleChoice, $loginId){
+        $tagIdOrganizer = dbQuery("SELECT * FROM recipes
+            INNER JOIN scores ON scores.recipeId = recipes.recipeId
+            INNER JOIN recipe_tag_linked ON recipe_tag_linked.recipeId = scores.recipeId
+            INNER JOIN recipeTags ON recipeTags.recipeTagName =  recipe_tag_linked.recipeTagName
+            -- INNER JOIN scores ON recipeTags.recipeTagId =  scores.recipeId
+            -- INNER JOIN scores ON scores.recipeId = recipe_tag_linked.recipeId
+            WHERE scores.loginId = :loginId
+            -- ORDER BY dateOfPost DESC
+            ORDER BY score DESC
+            ", array("loginId" => $loginId))->fetchALL();
+            $tagPostArray = array();
+            $returnTaggedPosts="";
+            echo "<h2 class='$styleChoice'>All Recipes</h2>";
+            foreach ($tagIdOrganizer as $tagPosts){
+                if(!@$tagPostArray[$tagPosts['recipeTagName']]){
+                    $tagPostArray[$tagPosts['recipeTagName']] = true;
+                }
+            $returnTaggedPosts .= "<div class='recipeList' ><a href ='/cookingWebsite/yourCookbook/theRecipeCookbook.php?recipeId=".
                 $tagPosts['recipeId']."' class='recipeDesign' > ". $tagPosts['title']." </a></div>";
             }
             return $returnTaggedPosts;

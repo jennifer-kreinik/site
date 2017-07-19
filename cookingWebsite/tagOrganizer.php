@@ -4,7 +4,7 @@ include('config/init.php');
     $recipeTags = recipeTagOrganizer ();
  ?>
  <div  class='title'>
-     <h2 style='text-decoration: underline'> All Recipes </h2>
+     <h2 style='text-decoration: underline; color:#1e1514'><a style='text-decoration: none' href = '/cookingWebsite/recipes.php?recipeTagId=8' />All Recipes </a></h2>
 
  <a href = '/cookingWebsite/recipes.php?recipeTagId=1' class= 'tag1'/> Breakfast </a><br/>
  <a href = '/cookingWebsite/recipes.php?recipeTagId=2 ' class= 'tag2' /> Brunch </a><br/>

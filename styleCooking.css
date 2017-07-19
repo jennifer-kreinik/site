@@ -157,8 +157,9 @@ input[type=text], select, input[type=password], textarea{
     display: inline-block;
     padding: 12px;
     width: 25%;
-    background: #d9d9d9;
-    color: #1e1514;;
+    background: #633141;
+    /*#d9d9d9;*/
+    color: #e9e9e9;
     float: center;
     text-align: center;
     cursor: pointer;
@@ -256,6 +257,13 @@ input[type=text], select, input[type=password], textarea{
     text-decoration: none;
     text-align: center;
 }
+.tag8{
+    font-family: 'Esteban', serif;
+    font-size: 29px;
+    color: #1e1514;
+    text-decoration: none;
+    text-align: center;
+}
 .recipeDesign{
     color: #1e1514;
     text-decoration: none;
@@ -277,8 +285,11 @@ to try to get cool jquery effects on my homepage*/
 	padding: 0;
 	list-style: none;
 	display: inline-block;
+    position:relative;
 	text-align: center;
+    justify-content: center;
 	width: 100%;
+    float: center;
 }
 
 .ch-grid:after,
@@ -294,6 +305,7 @@ to try to get cool jquery effects on my homepage*/
 .ch-grid li {
 	width: 300px;
 	height: 300px;
+    /*position: relative;*/
 	display: inline-block;
     text-align: center;
 	margin: 20px;
@@ -305,6 +317,7 @@ to try to get cool jquery effects on my homepage*/
 	border-radius: 50%;
 	overflow: hidden;
 	position: relative;
+    /*float: center;*/
 	cursor: default;
 	box-shadow:
 		inset 0 0 0 16px rgba(255,255,255,0.6),
@@ -390,13 +403,17 @@ to try to get cool jquery effects on my homepage*/
 .ch-item:hover .ch-info p {
 	opacity: 1;
 }
-.portholes{
+/*.portholes{
     position:relative;
     display: flex;
     text-align: center;
-    margin: 18.5%;
-    margin-top: 0;
-}
+    float:center;*/
+    /*justify-content: center;*/
+
+    /*margin-left: 16.5%;
+    margin-right:16.5%;*/
+    /*margin-top: 0;
+}*/
 #mins, #secs{
     width: 12%;
     font-size: 16px;
@@ -456,3 +473,16 @@ to try to get cool jquery effects on my homepage*/
     background-color: #eee; /* Add a hover effect to all links, except for headers */
 }
 /*END OF SEARCH BAR*/
+/*button styling*/
+/*.deleteTags{
+    width: 15%;
+    text-align: center;
+    font-family: 'Esteban', serif;
+    font-size: 16px;
+    color: #1e1514;
+    padding: 14px 45px;
+    margin-left: 10px;
+    border-color: #1e1514;
+    border-radius: 4px;
+    cursor: pointer;
+}*/

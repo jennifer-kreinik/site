@@ -97,7 +97,7 @@ echo recipeContent($recipeId, 'body');
         <input type='hidden' name='recipeId' value='$recipeId'/>
         <input type='hidden' name='dateOfPost' id='dateOfPost' value='getPostDateTime()' />".
         dropDownMenu ('Delete An Existing Tag', 'tagName', 'Delete Tag', currentCookingTagDropDownMenu($recipeId), @$errors2['recipeIngredientName']).
-        deleteButton('Delete Tag').
+        "<div class = 'deleteTags'>".deleteButton('Delete Tag').
          "</form></div></div></div>";
 ?>
 

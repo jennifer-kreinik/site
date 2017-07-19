@@ -52,7 +52,7 @@ function addNewTagToExistingRecipe($tagName, $recipeId){
         VALUES (:recipeIngredientName, :recipeId)", array('recipeIngredientName'=>$tagName, 'recipeId'=>$recipeId));
             //header('Location:cookingWebsite/yourCookbook/yourRecipes.php');
 }
-function deleteTagFromExistingRecipe($tagName, $postId){
+function deleteTagFromExistingRecipes($tagName, $postId){
     dbQuery("DELETE FROM recipe_identifier_linked WHERE recipeIngredientName=:recipeIngredientName and recipeId=:recipeId",
         array('recipeIngredientName'=>$tagName, 'recipeId'=>$postId));
         //header('Location:cookingWebsite/yourCookbook/yourRecipes.php');
@@ -74,4 +74,63 @@ function insertRatingIntoTable($loginId, $recipeId, $rating){
     dbQuery("INSERT INTO ratings(loginId, recipeId, rating)
             VALUES(:loginId, :recipeId, :rating)",
             array('loginId'=>$loginId, 'recipeId'=>$recipeId, 'rating'=>$rating));
+}
+function algorithm(){
+    $total = 0;
+    $loginQuery = dbQuery("SELECT * FROM cookingLogin")->fetchALL();
+    $loginArray = array();
+        //$returnRecipeTags = "";
+        foreach ($loginQuery as $logins){
+            if(!@$loginArray[$logins['loginId']]){
+                $loginArray[$logins['loginId']] = true;
+            }
+                $loginId = $logins['loginId'];
+
+
+    $recipeQuery = dbQuery("SELECT * FROM recipes")->fetchALL();
+    $recipeArray = array();
+        //$returnRecipeTags = "";
+        foreach ($recipeQuery as $recipes){
+            if(!@$recipeArray[$recipes['recipeId']]){
+                $recipeArray[$recipes['recipeId']] = true;
+            }
+                $recipeId = $recipes['recipeId'];
+                $tagQuery = dbQuery("SELECT * FROM recipe_identifier_linked
+                            WHERE recipeId= :recipeId", array('recipeId'=>$recipeId))->fetchALL();
+                $tagArray = array();
+                foreach ($tagQuery as $tags){
+
+                    if(!@$tagArray[$tags['recipeIngredientName']]){
+                        $tagArray[$tags['recipeIngredientName']] = true;
+
+                    }
+                    $recipeIngredientName = $tags['recipeIngredientName'];
+                    $recipeTagQuery = dbQuery("SELECT * FROM recipe_identifier_linked
+                                        WHERE recipeId != :recipeId AND recipeIngredientName =:recipeIngredientName" ,
+                                        array('recipeId'=>$recipeId, 'recipeIngredientName'=>$recipeIngredientName))->fetchALL();
+                    $recipeTagArray = array();
+                    foreach ($recipeTagQuery as $recipeTag){
+                        if(!@$recipeTagArray[$recipeTag['recipeId']]){
+                            $recipeTagArray[$recipeTag['recipeId']] = true;
+                        }
+                        $recipeId2 = $recipeTag['recipeId'];
+                        $score=dbQuery("SELECT* FROM ratings WHERE recipeId = :recipeId AND loginId=:loginId", array('recipeId'=>$recipeId2, 'loginId'=>$loginId))->fetch();
+                        $total += $score['rating'];
+                    // var_dump($recipeId);echo"<br/><br/>";
+                    // var_dump($total);echo"<br/><br/>";
+                    // var_dump($recipeId2);echo"<br/><br/>";
+                    // var_dump($recipeIngredientName);echo"<br/><br/>";
+                    // die("hello friends");
+                    }
+
+                }
+
+        $insertQuery = dbQuery("UPDATE scores
+            SET score= :score
+            WHERE loginId = :loginId AND recipeId = :recipeId", array('loginId'=>$loginId, 'recipeId'=>$recipeId, 'score'=>$total));
+            $total = 0;
+        }
+
+
+    }
 }

@@ -45,11 +45,7 @@ function echoHeaderHtml($title, $head){
             </a> </li>
         <li style = 'float: right'>
             <a href = '/blogUserView/login.php'>
-                Login
-            </a> </li>
-        <li style = 'float: right'>
-            <a href = '/blogUserView/signUp.php'>
-                Sign Up
+                Admin
             </a> </li>
     </ul>
 </div>";}
