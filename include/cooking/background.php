@@ -86,6 +86,10 @@ function yourCookbookEchoHtmlHeader($title){
                     Tags
             </a> </li>
         <li>
+            <a href = '/cookingWebsite/yourCookbook/usageData.php'>
+                Usage Data
+            </a> </li>
+        <li>
             <a href = '/cookingWebsite/yourCookbook/logoutCooking.php'>
                 Logout
             </a> </li>

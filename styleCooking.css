@@ -403,17 +403,17 @@ to try to get cool jquery effects on my homepage*/
 .ch-item:hover .ch-info p {
 	opacity: 1;
 }
-/*.portholes{
+.portholes{
     position:relative;
     display: flex;
     text-align: center;
-    float:center;*/
-    /*justify-content: center;*/
+    float:center;
+    justify-content: center;
 
-    /*margin-left: 16.5%;
-    margin-right:16.5%;*/
-    /*margin-top: 0;
-}*/
+    margin-left: 18.5%;
+    /*margin-right:16.5%;*/
+    margin-top: 0;
+}
 #mins, #secs{
     width: 12%;
     font-size: 16px;
