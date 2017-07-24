@@ -19,7 +19,7 @@ h1{
     text-align:center;
     font-size: 40px;
     font-style: bold;
-    font-family: 'Gilda Display', serif;;
+    font-family: 'Gilda Display', serif;
 }
 h2{
     color:#9B90A0;
@@ -228,7 +228,9 @@ li a:hover {
 .commentStyle{
     font-size: 25px;
     background-color: #e2e6e9;
+    overflow:scroll;
     text-align: left;
+    word-wrap: break-word;
     /*#F7F8F9*/
     /*#8ba6c1;*/
 
@@ -245,6 +247,8 @@ li a:hover {
     text-align: left;
     color:#637583;
     font-size: 18px;
+    word-wrap: break-word;
+
 }
 .fa-pencil-square-o{
     color:#637583;
@@ -259,7 +263,7 @@ li a:hover {
     font-size: 20px;
     font-family: 'Gilda Display', serif;
 }
-input[type=text], select, textarea{
+input[type=text], select, textarea, input[type=password]{
     width: 80%;
     font-size: 16px;
     padding:12px 30px;
@@ -290,4 +294,12 @@ input[type=submit], input[type=reset] {
     border-radius: 4px;
     box-sizing: border-box;
     color: #637583;
+}
+.error{
+    color: #f94a4a;
+    font-size: 14px
+}
+.writePost{
+    width:80%;
+    margin-left: .8%;
 }
