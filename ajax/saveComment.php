@@ -1,5 +1,5 @@
 <?php
-include('config/init.php');
+include('init.php');
 if(isset($_REQUEST['submitItem'])){
     $errors = array();
 
