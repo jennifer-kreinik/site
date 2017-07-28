@@ -1,8 +1,8 @@
 <?php
-include('config/init.php');
+include('init.php');
 verifyUserCooking();
 if(isset($_REQUEST['addItem'])){
-    
+
     $errors = array();
 
     if(!@$_REQUEST['ingredientName']){
