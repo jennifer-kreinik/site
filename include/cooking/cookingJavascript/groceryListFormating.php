@@ -4,13 +4,12 @@ function newGroceryItem(){
     var addItem = $('#addItem').val();
 
     if(ingredientName == ''){
-        console.log("im here 2");
-        return false;
         alert("Please enter an ingredient name");
         return false;
     }
-    //console.log("we're here 2", addItem, ingredient);
-
+    //$('#temp').html('hello')
+    //$.append('asfasf');
+    //JSON.parse or something like that
     $.post('/ajax/saveShoppingList.php', {ingredientName:ingredientName, addItem:addItem}, function(Data){
           if (Data == "failure"){
             alert("Error");
@@ -20,10 +19,6 @@ function newGroceryItem(){
     });
     return false;
 }
-// function strikeThrough(){
-//     var ingredient = $('#ingredientName').val();
-//     $('ingredient').strike();
-// }
 function deleteIngredient(ingredientId){
     console.log(ingredientId);
     var deleteBtn = $('#deleteBtn').val();
@@ -32,7 +27,5 @@ function deleteIngredient(ingredientId){
         console.log("2");
     return false;
 }
-// function favorited(){
-//     $('#faves').css('color','#ffff66');
-// }
+
 </script>

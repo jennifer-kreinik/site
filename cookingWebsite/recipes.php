@@ -1,5 +1,6 @@
  <?php
- include('config/init.php');
+include('init.php');
+ // include('config/init.php');
  echo echoCookingHeaderHtml("Recipes");
   $recipeTagName = $_REQUEST['recipeTagId'];
   if ($recipeTagName == 1){

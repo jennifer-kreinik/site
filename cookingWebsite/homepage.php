@@ -1,9 +1,10 @@
 <?php
-include('config/init.php');
+include('init.php');
+// include('config/init.php');
     echo echoCookingHeaderHtml("Homepage");
  ?>
  <br/>
- <div class="portholes"> 
+ <div class="portholes">
  <ul class="ch-grid">
 	<li>
 		<div class="ch-item ch-img-1">

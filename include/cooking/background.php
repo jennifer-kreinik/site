@@ -86,15 +86,15 @@ function yourCookbookEchoHtmlHeader($title){
                     Tags
             </a> </li>
         <li>
-            <a href = '/cookingWebsite/yourCookbook/usageData.php'>
-                Usage Data
-            </a> </li>
-        <li>
             <a href = '/cookingWebsite/yourCookbook/logoutCooking.php'>
                 Logout
             </a> </li>
 
 </div>";}
+// <li>
+    // <a href = '/cookingWebsite/yourCookbook/usageData.php'>
+    //     Usage Data
+    // </a> </li>
 //         <script src='//cdn.quilljs.com/1.2.6/quill.js'></script>
         // <script src='//cdn.quilljs.com/1.2.6/quill.min.js'></script>
         // <link href='//cdn.quilljs.com/1.2.6/quill.snow.css' rel='stylesheet'>

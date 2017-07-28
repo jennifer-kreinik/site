@@ -1,5 +1,6 @@
 <?php
-include('config/init.php');
+include('init.php');
+// include('config/init.php');
 verifyUserCooking();
 $recipeId = $_REQUEST['recipeId'];
 $loginId = $_SESSION['loginId'];
