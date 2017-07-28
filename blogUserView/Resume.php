@@ -1,5 +1,6 @@
 <?php
-include('config/init.php');
+include('init.php');
+// include('config/init.php');
 echo echoHeaderHtml("Research/Resume", "Research and Resumes");
  ?>
 <h2> Research

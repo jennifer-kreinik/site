@@ -77,28 +77,27 @@ function insertRatingIntoTable($loginId, $recipeId, $rating){
 }
 function algorithm(){
     $total = 0;
-    $loginQuery = dbQuery("SELECT * FROM cookingLogin")->fetchALL();
+    $loginQuery = dbQuery("SELECT * FROM cookingLogin")->fetchALL(); //get a list of all of the login IDs
     $loginArray = array();
-        //$returnRecipeTags = "";
-        foreach ($loginQuery as $logins){
-            if(!@$loginArray[$logins['loginId']]){
+    // $recipeQuery = dbQuery("SELECT * FROM recipes")->fetchALL(); //new
+    foreach ($loginQuery as $logins){   //start to loop through each login ID 1-by-1
+        if(!@$loginArray[$logins['loginId']]){
                 $loginArray[$logins['loginId']] = true;
             }
                 $loginId = $logins['loginId'];
 
 
-    $recipeQuery = dbQuery("SELECT * FROM recipes")->fetchALL();
+    $recipeQuery = dbQuery("SELECT * FROM recipes")->fetchALL();  //get a list of all the recipes
     $recipeArray = array();
-        //$returnRecipeTags = "";
-        foreach ($recipeQuery as $recipes){
+        foreach ($recipeQuery as $recipes){     //start to loop through the reccipes 1-by-1
             if(!@$recipeArray[$recipes['recipeId']]){
                 $recipeArray[$recipes['recipeId']] = true;
             }
                 $recipeId = $recipes['recipeId'];
                 $tagQuery = dbQuery("SELECT * FROM recipe_identifier_linked
-                            WHERE recipeId= :recipeId", array('recipeId'=>$recipeId))->fetchALL();
+                            WHERE recipeId= :recipeId", array('recipeId'=>$recipeId))->fetchALL(); //gets all the tags associated with the recipe
                 $tagArray = array();
-                foreach ($tagQuery as $tags){
+                foreach ($tagQuery as $tags){ //loops through each tag to sum up up the total ratings that have been given to other recipes
 
                     if(!@$tagArray[$tags['recipeIngredientName']]){
                         $tagArray[$tags['recipeIngredientName']] = true;
@@ -108,6 +107,7 @@ function algorithm(){
                     $recipeTagQuery = dbQuery("SELECT * FROM recipe_identifier_linked
                                         WHERE recipeId != :recipeId AND recipeIngredientName =:recipeIngredientName" ,
                                         array('recipeId'=>$recipeId, 'recipeIngredientName'=>$recipeIngredientName))->fetchALL();
+                    //above gets the ratings of a specific tag from recipes with a recipeID UNEQUAL to the recipe we are looking at at the current moment
                     $recipeTagArray = array();
                     foreach ($recipeTagQuery as $recipeTag){
                         if(!@$recipeTagArray[$recipeTag['recipeId']]){
@@ -115,7 +115,8 @@ function algorithm(){
                         }
                         $recipeId2 = $recipeTag['recipeId'];
                         $score=dbQuery("SELECT* FROM ratings WHERE recipeId = :recipeId AND loginId=:loginId", array('recipeId'=>$recipeId2, 'loginId'=>$loginId))->fetch();
-                        $total += $score['rating'];
+                        //gets the rating of each tag from the parent recipe
+                        $total += $score['rating']; //sums together all of the ratings of each tag to give each recipe a final score
                     // var_dump($recipeId);echo"<br/><br/>";
                     // var_dump($total);echo"<br/><br/>";
                     // var_dump($recipeId2);echo"<br/><br/>";

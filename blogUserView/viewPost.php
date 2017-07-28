@@ -1,5 +1,6 @@
 <?php
-include('config/init.php');
+include('init.php');
+// include('config/init.php');
 // $errorAlert = sizeof(@$errors);
 $postId =  $_REQUEST['blogPostId'];
 //$commentId =  $_REQUEST['id'];

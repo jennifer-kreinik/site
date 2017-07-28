@@ -23,3 +23,4 @@ include('include/cooking/cookingJavascript/groceryListFormating.php');
 include('include/cooking/cookingJavascript/timer.php');
 include('include/cooking/cookingJavascript/searchbar.php');
 include('include/cooking/cookingQuerys/ratingSystem.php');
+//include('include/cooking/pace.js');
