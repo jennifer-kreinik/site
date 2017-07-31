@@ -1,7 +1,7 @@
 <?php
 include('init.php');
 verifyUserCooking();
-
+//trying to make this work
 if(isset($_REQUEST['submitItem'])){
     $errors1 = array();
 
