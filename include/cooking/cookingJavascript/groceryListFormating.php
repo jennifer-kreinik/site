@@ -22,7 +22,7 @@ function newGroceryItem(){
 function deleteIngredient(ingredientId){
     console.log(ingredientId);
     var deleteBtn = $('#deleteBtn').val();
-    $.post('/ajax/deleteIngredientOffShoppingList.php', { deleteBtn:deleteBtn, ingredientId:ingredientId}, function(Data){
+    $.post('/ajax/deleteIngredientOffSHoppingList.php', { deleteBtn:deleteBtn, ingredientId:ingredientId}, function(Data){
         $('.allIngredients').html(Data)});
         console.log("2");
     return false;
