@@ -11,7 +11,7 @@ function addTagExistingRecipe(recipeId){
     var recipeIngredientName = $('#recipeIngredientName').val();
     var submitItem = $('#submitItem').val();
     console.log(recipeId, submitItem, recipeIngredientName)
-    $.post('/ajax/saveAddedtag.php', {recipeIngredientName:recipeIngredientName, submitItem:submitItem, recipeId:recipeId}, function(Data){
+    $.post('/ajax/saveAddedTag.php', {recipeIngredientName:recipeIngredientName, submitItem:submitItem, recipeId:recipeId}, function(Data){
           if (Data == "failure"){
             alert("Error");
             return false;

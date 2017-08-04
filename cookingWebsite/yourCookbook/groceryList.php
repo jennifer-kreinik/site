@@ -2,6 +2,7 @@
 include('init.php');
 // include('config/init.php');
 verifyUserCooking();
+
 echo yourCookbookEchoHtmlHeader("New Recipe");
 ?>
 

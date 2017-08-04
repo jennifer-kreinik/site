@@ -71,9 +71,9 @@ function addNewIngredientShoppingList($loginId, $ingredientName){
         array('loginId'=>$loginId,'ingredientName'=>$ingredientName));
         // header('/cookingWebsite/yourCookbook/groceryList.php');
 }
-function deleteIngredentFromList($ingredientId){
-    dbQuery("DELETE FROM shoppingList WHERE ingredientId=:ingredientId",
-        array('ingredientId'=>$ingredientId));
+function deleteIngredentFromList($loginId, $ingredientId){
+    dbQuery("DELETE FROM shoppingList WHERE loginId=:loginId AND ingredientId=:ingredientId"  ,
+        array('loginId'=>$loginId, 'ingredientId'=>$ingredientId));
         header('/cookingWebsite/yourCookbook/groceryList.php');
 }
 function allRecipes(){
