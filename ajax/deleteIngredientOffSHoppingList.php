@@ -2,5 +2,6 @@
 include('init.php');
 verifyUserCooking();
 $deleteItem = $_REQUEST['ingredientId'];
-deleteIngredentFromList($deleteItem);
+$loginId = $_SESSION['loginId'];
+deleteIngredentFromList($loginId, $deleteItem);
 echo listOfShoppingList();
